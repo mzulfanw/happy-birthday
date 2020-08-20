@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- CSS buatan sendiri -->
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <audio id="mySound" src="photograph.mp3"></audio>
+
+
+
+
+    <div class="header">
+        <h1 id="first">Happy Birthday Olya</h1>
+    </div>
+
+    <button class="klik" onclick="myFunction()">Touch me</button>
+    <p id="message"></p>
+
+    <div id="footer">
+        <p id="tengah">Made With zulfan and &#10084;</p>
+    </div>
+
+    <script>
+        var i = 0;
+        var txt =
+            'You are a great friend, and Im so glad to met you. You have a good attitude and person and i like it.  i hope we can meet and talk about each others and can be succesful in the future. ';
+        var speed = 50;
+
+        function myFunction() {
+            if (i < txt.length) {
+                document.getElementById("message").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(myFunction, speed);
+            }
+        }
+        setTimeout(() => {
+            document.getElementById('mySound').play();
+        }, 500)
+    </script>
+</body>
+
+</html>
